@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/favicon-enhanced.png" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+  <style>
+    .alert {
+      display: none;
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+      box-shadow: 0px 0px 10px 0px #262626;
+      opacity: 0.8;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+    #emptyFieldsAlert { background-color: red; }
+    #loginErrorAlert, #signupErrorAlert { background-color: red; }
+    input[type="password"]::-webkit-credentials-auto-fill-button,
+    input[type="password"]::-webkit-contacts-auto-fill-button,
+    input[type="password"]::-ms-reveal { display: none; }
+  </style>
+
+  <title>Aarogyam - Login</title>
+</head>
+<body onload="myfunction()">
+
+  <div id="load">
+    <div style="background-color: white; height: 25vh; width: 100%; position: relative; top: -70px;"></div>
+  </div>
+
+  <!-- Alert messages -->
+  <div class="alert" id="emptyFieldsAlert">Please fill in all fields!</div>
+  <div class="alert" id="loginAlert">Sign in successful!</div>
+  <div class="alert" id="signupAlert">Sign up successful!</div>
+  <div class="alert" id="loginErrorAlert">Login failed!</div>
+  <div class="alert" id="signupErrorAlert">Signup failed!</div>
+
+  <img src="../images/signupill.png" alt="" />
+
+  <!-- LOGIN -->
+  <div class="login">
+    <div class="welcome">
+      <h1 class="titletext">Welcome Back &#x1F917</h1>
+      <span>Please enter your details.</span>
+    </div>
+    <div class="inputs">
+      <span>Email<br /></span>
+      <input class="inputbox" placeholder="Enter your email" id="loginEmail" /><br />
+      <span>Password<br /></span>
+      <input type="password" class="inputbox" placeholder="••••••••" id="loginPassword" />
+      <i class="fas fa-eye-slash" id="toggleLoginPassword" style="margin-left: -30px; cursor: pointer;"></i>
+    </div>
+    <div class="forgotpass">
+      <span>Forgot Password</span>
+    </div>
+    <p class="back"><a class="tag" href="../index.html">&#8592; Back</a></p>
+    <div class="button">
+      <input type="button" class="signin" value="Sign in" id="loginButton" />
+    </div>
+    <div class="signupline">
+      <span>Don't have an account?</span>
+      <span class="signupbutton"> Sign up</span>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div class="register">
+    <div class="welcome">
+      <h1 class="titletext">Create an account</h1>
+      <span>Let's get started.</span>
+    </div>
+    <div class="inputs">
+      <span>Username<br /></span>
+      <input class="inputbox" placeholder="Enter your username" id="signupUsername" /><br />
+      <span>Email<br /></span>
+      <input class="inputbox" placeholder="Enter your email" id="signupEmail" /><br />
+      <span>Password<br /></span>
+      <input type="password" class="inputbox" placeholder="••••••••" id="signupPassword" />
+      <i class="fas fa-eye-slash" id="toggleSignupPassword" style="margin-left: -30px; cursor: pointer;"></i>
+    </div>
+    <p class="back-1"><a class="tag1" href="../index.html">&#8592; Back</a></p>
+    <div class="button">
+      <input type="button" class="signin" value="Sign up" id="signupButton" />
+    </div>
+    <div class="signupline">
+      <span>Already have an account?</span>
+      <span class="signinbutton"> Sign in</span>
+    </div>
+  </div>
+
+  <script>
+    const backendURL = "http://localhost:5000/api/auth";
+
+    // Toggle views
+    const signin_btn = document.querySelector(".signinbutton");
+    const signup_btn = document.querySelector(".signupbutton");
+    const register = document.querySelector(".register");
+    const login = document.querySelector(".login");
+
+    signup_btn.addEventListener("click", () => {
+      register.style.display = "block";
+      login.style.display = "none";
+    });
+    signin_btn.addEventListener("click", () => {
+      register.style.display = "none";
+      login.style.display = "block";
+    });
+
+    // LOGIN
+    const loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", async () => {
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+      const loginAlert = document.getElementById("loginAlert");
+      const loginErrorAlert = document.getElementById("loginErrorAlert");
+
+      if (!email || !password) {
+        document.getElementById("emptyFieldsAlert").style.display = "block";
+        setTimeout(() => document.getElementById("emptyFieldsAlert").style.display = "none", 3000);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${backendURL}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          localStorage.setItem("token", data.token);
+          loginAlert.style.display = "block";
+          setTimeout(() => loginAlert.style.display = "none", 3000);
+          window.location.href = "../index.html";
+        } else {
+          loginErrorAlert.textContent = data.message;
+          loginErrorAlert.style.display = "block";
+          setTimeout(() => loginErrorAlert.style.display = "none", 3000);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
+
+    // SIGNUP
+    const signupButton = document.getElementById("signupButton");
+    signupButton.addEventListener("click", async () => {
+      const username = document.getElementById("signupUsername").value.trim();
+      const email = document.getElementById("signupEmail").value.trim();
+      const password = document.getElementById("signupPassword").value.trim();
+      const signupAlert = document.getElementById("signupAlert");
+      const signupErrorAlert = document.getElementById("signupErrorAlert");
+
+      if (!username || !email || !password) {
+        document.getElementById("emptyFieldsAlert").style.display = "block";
+        setTimeout(() => document.getElementById("emptyFieldsAlert").style.display = "none", 3000);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${backendURL}/signup`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: username, email, password }),
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          signupAlert.style.display = "block";
+          setTimeout(() => signupAlert.style.display = "none", 3000);
+          window.location.href = "login.html";
+        } else {
+          signupErrorAlert.textContent = data.message;
+          signupErrorAlert.style.display = "block";
+          setTimeout(() => signupErrorAlert.style.display = "none", 3000);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
+
+    // Password toggle
+    const toggleLoginPassword = document.querySelector("#toggleLoginPassword");
+    const loginPassword = document.getElementById("loginPassword");
+    toggleLoginPassword.addEventListener("click", () => {
+      loginPassword.type = loginPassword.type === "password" ? "text" : "password";
+      toggleLoginPassword.className = loginPassword.type === "password" ? "fas fa-eye-slash" : "fas fa-eye";
+    });
+
+    const toggleSignupPassword = document.querySelector("#toggleSignupPassword");
+    const signupPassword = document.getElementById("signupPassword");
+    toggleSignupPassword.addEventListener("click", () => {
+      signupPassword.type = signupPassword.type === "password" ? "text" : "password";
+      toggleSignupPassword.className = signupPassword.type === "password" ? "fas fa-eye-slash" : "fas fa-eye";
+    });
+
+    // Preloader
+    const preloader = document.getElementById("load");
+    function myfunction() {
+      preloader.style.display = "none";
+    }
+  </script>
+</body>
+</html>
