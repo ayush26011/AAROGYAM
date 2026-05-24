@@ -744,3 +744,124 @@ nav {
   transform: translateY(-1px) scale(0.95) !important;
 }
 
+/* ==========================================
+   SILENT LUXURY Brand Color Redesign
+   ========================================== */
+body {
+  background-color: #F5F5F2 !important; /* Soft White */
+  color: #1F3B2F !important;
+}
+
+header {
+  background-image: linear-gradient(rgba(31, 59, 47, 0.8), rgba(31, 59, 47, 0.85)),
+    url("../../images/laughing.png") !important;
+}
+
+nav {
+  background-color: rgba(31, 59, 47, 0.95) !important;
+  border-bottom: 1px solid rgba(183, 183, 176, 0.2) !important;
+}
+
+.nav-links ul li::after {
+  background: #7A8B6F !important; /* Olive Accent underline */
+}
+
+/* Page section text colors */
+h1, h2, h3, h4, h5, p {
+  color: #1F3B2F !important;
+}
+
+/* Carousel Prev/Next Buttons */
+.prev, .next {
+  background-color: #1F3B2F !important;
+  color: #F5F5F2 !important;
+}
+
+.prev:hover, .next:hover {
+  background-color: #7A8B6F !important;
+  color: #1F3B2F !important; /* High contrast text on hover */
+}
+
+/* Back to top buttons overrides */
+.back-top-wrap {
+  background-color: #7A8B6F !important;
+  box-shadow: 0 4px 12px rgba(122, 139, 111, 0.4) !important;
+}
+
+.back-top-wrap .fas.fa-arrow-up {
+  color: #F5F5F2 !important;
+}
+
+.back-top-wrap:hover {
+  background-color: #1F3B2F !important;
+  box-shadow: 0 10px 20px rgba(31, 59, 47, 0.4) !important;
+}
+
+/* Footer Section Overrides */
+.footer-container {
+  background-color: #1F3B2F !important; /* Forest Green background */
+  color: #F5F5F2 !important;
+}
+
+.footer-container h3 {
+  color: #F5F5F2 !important;
+}
+
+.footer-container h3 .underline {
+  background: #B7B7B0 !important;
+}
+
+.footer-container h3 .underline span {
+  background: #7A8B6F !important;
+}
+
+.footer-container .col ul li a {
+  color: rgba(245, 245, 242, 0.8) !important;
+}
+
+.footer-container .col ul li a:hover {
+  color: #b0cbb4 !important; /* Lighter high-contrast olive for dark background links */
+}
+
+.footer-container .col .social-menu ul a li {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #F5F5F2 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-container .col .social-menu ul a li:hover {
+  background: #7A8B6F !important;
+  border-color: #7A8B6F !important;
+}
+
+.menu {
+  background-color: #1F3B2F !important;
+}
+
+.menu-link li a {
+  color: #F5F5F2 !important;
+}
+
+.menu-link li a:hover {
+  color: #b0cbb4 !important; /* Lighter high-contrast olive for dark menu background */
+}
+
+/* ADAPTIVE TEXT CONTRAST SYSTEM FOR LAUGH.CSS */
+header h1, header h2, header h3, header h4, header h5, header p, header span {
+  color: #F5F5F2 !important;
+}
+
+header .heading-span, header span.heading-span {
+  color: #b0cbb4 !important; /* High contrast light green for dark header overlay */
+}
+
+.footer-container p, .footer-container .footerpara, .footer-container .footerheading, .footer-container .email-id a {
+  color: #F5F5F2 !important;
+}
+
+.footer-container .email-id a:hover {
+  color: #b0cbb4 !important;
+}
+
+
+

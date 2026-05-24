@@ -2,8 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap");
 
 :root {
-  --main-icon-color: #5328af;
-  --main-bg-color: #f3f3fb;
+  --main-icon-color: #1F3B2F; /* Forest Green */
+  --main-bg-color: #F5F5F2; /* Soft White */
+  --accent-color: #7A8B6F; /* Olive Accent */
+  --border-color: #B7B7B0; /* Stone Gray */
 }
 
 body {
@@ -116,8 +118,8 @@ img {
   text-overflow: clip;
   background: var(--main-icon-color);
   background: linear-gradient(0deg,
-      rgba(96, 9, 240, 1) 0%,
-      var(--main-icon-color) 100%);
+      #4e5b45 0%,
+      var(--main-icon-color) 100%) !important;
   border: none;
 }
 
@@ -127,10 +129,7 @@ img {
 }
 
 .signin:hover {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
-    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 15px rgba(122, 139, 111, 0.4) !important;
 }
 
 .back-1 {
@@ -334,10 +333,27 @@ img {
 
 .signupbutton:hover, .signinbutton:hover, .forgotpass span:hover {
   transform: scale(1.05) !important;
-  text-shadow: 0 0 6px rgba(83, 40, 175, 0.3) !important;
+  text-shadow: 0 0 6px rgba(31, 59, 47, 0.3) !important;
 }
 
 .tag:hover, .tag1:hover {
   transform: translateX(-4px) !important;
+  color: #4e5b45 !important; /* Dark Olive Accent on hover for readability */
+}
+
+/* ADAPTIVE TEXT CONTRAST SYSTEM FOR LOGIN.CSS */
+.welcome h1 {
+  color: var(--main-icon-color) !important;
+}
+
+.welcome span, .signupline {
+  color: #4e5b45 !important; /* Dark Olive for readable secondary text */
+}
+
+.inputs span {
+  color: var(--main-icon-color) !important;
+}
+
+.tag, .tag1 {
   color: var(--main-icon-color) !important;
 }

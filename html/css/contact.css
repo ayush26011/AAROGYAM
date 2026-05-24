@@ -183,3 +183,58 @@ a .btn:active {
   text-shadow: 0 0 8px rgba(19, 122, 252, 0.3) !important;
 }
 
+/* ==========================================
+   SILENT LUXURY Brand Color Redesign
+   ========================================== */
+body {
+  background: linear-gradient(rgba(31, 59, 47, 0.75), rgba(31, 59, 47, 0.85)),
+    url("../../images/contact.png") no-repeat center center / cover !important;
+}
+
+.form-container {
+  background-color: rgba(31, 59, 47, 0.9) !important; /* Forest Green base */
+  border-color: rgba(183, 183, 176, 0.3) !important; /* Stone Gray border */
+}
+
+h1, p {
+  color: #F5F5F2 !important; /* Soft White */
+}
+
+.form-floating input {
+  background-color: rgba(245, 245, 242, 0.15) !important;
+  color: #F5F5F2 !important;
+  border: 1px solid rgba(183, 183, 176, 0.4) !important;
+}
+
+.form-floating label {
+  color: rgba(245, 245, 242, 0.8) !important;
+}
+
+.form-floating input:focus {
+  border-color: #7A8B6F !important; /* Olive Accent focus */
+  box-shadow: 0 0 12px rgba(122, 139, 111, 0.5) !important;
+}
+
+a .btn {
+  background-color: #1F3B2F !important;
+  border: 2px solid #1F3B2F !important;
+  color: #F5F5F2 !important;
+}
+
+a .btn:hover {
+  background-color: #7A8B6F !important; /* Olive Accent background */
+  border-color: #7A8B6F !important;
+  color: #1F3B2F !important; /* High contrast text on hover */
+  box-shadow: 0 8px 15px rgba(122, 139, 111, 0.3) !important;
+}
+
+.tag {
+  color: #F5F5F2 !important;
+}
+
+.tag:hover {
+  color: #b0cbb4 !important; /* Lighter high-contrast olive for dark background links */
+}
+
+
+

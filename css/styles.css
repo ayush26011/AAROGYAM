@@ -145,3 +145,27 @@ h3 a:active {
   transform: translateY(0px) scale(0.98) !important;
 }
 
+/* ==========================================
+   SILENT LUXURY Brand Color Redesign
+   ========================================== */
+body {
+  background-image: linear-gradient(rgba(31, 59, 47, 0.8), rgba(31, 59, 47, 0.85)),
+    url("../images/coming_soon_bg.png") !important;
+  color: #F5F5F2 !important;
+}
+
+h1, h3, h3 a {
+  color: #F5F5F2 !important;
+}
+
+h1:hover {
+  color: #b0cbb4 !important; /* High contrast light green hover */
+  text-shadow: 0 0 20px rgba(176, 203, 180, 0.6) !important;
+}
+
+h3 a:hover {
+  color: #b0cbb4 !important;
+  text-shadow: 0 0 20px rgba(176, 203, 180, 0.6) !important;
+}
+
+

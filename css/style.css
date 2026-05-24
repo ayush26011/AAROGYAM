@@ -1692,4 +1692,314 @@ footer a:focus {
   100% {
     transform: translateX(0);
   }
-}
+}
+
+/* ==========================================
+   SILENT LUXURY Brand Color Redesign
+   ========================================== */
+
+/* Page Overlays & Sticky Navs */
+header {
+  background-image: linear-gradient(rgba(31, 59, 47, 0.75), rgba(31, 59, 47, 0.75)),
+    url("../images/landing-page-image.jpg") !important;
+}
+
+.nav.nav-active {
+  background: rgba(31, 59, 47, 0.95) !important;
+  border-bottom: 1px solid rgba(183, 183, 176, 0.2) !important;
+}
+
+.links li::after {
+  background: #7A8B6F !important; /* Olive Accent underline */
+}
+
+/* Page Background and Section Colors */
+body {
+  background-color: #F5F5F2 !important; /* Soft White main background */
+  color: #1F3B2F !important; /* Dark Forest text */
+}
+
+/* About Us Section Styles */
+#about {
+  background-color: #F5F5F2 !important;
+  color: #1F3B2F !important;
+}
+
+#about h1 {
+  color: #1F3B2F !important;
+}
+
+#about span {
+  color: #4e5b45 !important; /* Dark Olive Accent for light backgrounds */
+}
+
+/* Meet Our Members Section Styles */
+#about h3 span {
+  color: #1F3B2F !important; /* "MEET OUR MEMBERS" title */
+}
+
+.card {
+  background: #B7B7B0 !important; /* Stone Gray card background */
+  border: 1px solid rgba(31, 59, 47, 0.15) !important;
+  color: #1F3B2F !important;
+}
+
+.card h5 {
+  color: #1F3B2F !important; /* Member Name */
+}
+
+.card .pra p {
+  color: rgba(31, 59, 47, 0.8) !important; /* Developer Title */
+}
+
+.card:hover {
+  background: #F5F5F2 !important; /* Soft White when hovered */
+  border-color: #7A8B6F !important;
+  box-shadow: 0 20px 45px rgba(122, 139, 111, 0.3) !important; /* Olive glow shadow */
+}
+
+.card img {
+  border-color: rgba(31, 59, 47, 0.2) !important;
+}
+
+.card:hover img {
+  border-color: #7A8B6F !important;
+}
+
+/* Card Social Media Hover Colors */
+.card .pra ul li {
+  background: rgba(31, 59, 47, 0.08) !important;
+  border: 1px solid rgba(31, 59, 47, 0.15) !important;
+  color: #1F3B2F !important;
+}
+
+.card .pra ul a:hover li {
+  background: #7A8B6F !important; /* Olive Accent background */
+  border-color: #7A8B6F !important;
+}
+
+.card .pra ul a #social-github:hover i,
+.card .pra ul a #social-linkedin:hover i,
+.card .pra ul a #social-instagram:hover i {
+  color: #F5F5F2 !important; /* White icon on hover */
+  filter: drop-shadow(0 0 4px rgba(245, 245, 242, 0.8)) !important;
+}
+
+/* Services Section Colors */
+#services {
+  background-color: #1F3B2F !important; /* Deep Forest Green */
+  color: #F5F5F2 !important; /* Soft White text */
+}
+
+#services h1 {
+  color: #F5F5F2 !important;
+}
+
+.responsive {
+  border: 1px solid rgba(183, 183, 176, 0.3) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.responsive:hover {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: #7A8B6F !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(122, 139, 111, 0.2) !important;
+}
+
+/* Explore buttons in services */
+.responsive a {
+  background-color: #F5F5F2 !important; /* Soft White */
+  color: #1F3B2F !important; /* Forest Green text */
+  border: 1px solid #B7B7B0 !important;
+}
+
+.responsive a:hover {
+  background-color: #7A8B6F !important; /* Olive Accent hover background */
+  color: #F5F5F2 !important; /* Soft White hover text */
+  border-color: #7A8B6F !important;
+  box-shadow: 0 10px 20px rgba(122, 139, 111, 0.3) !important;
+}
+
+/* Primary buttons (Login, member button, back to top) */
+.login-button {
+  background-color: #1F3B2F !important; /* Forest Green */
+  border: 1px solid #B7B7B0 !important;
+}
+
+.login-button a {
+  color: #F5F5F2 !important; /* Soft White */
+}
+
+.login-button:hover {
+  background-color: #7A8B6F !important; /* Olive hover background */
+  border-color: #7A8B6F !important;
+  box-shadow: 0 8px 15px rgba(122, 139, 111, 0.3) !important;
+}
+
+.login-button:hover a {
+  color: #1F3B2F !important; /* High contrast dark green text on hover */
+}
+
+.pra button {
+  background-color: #1F3B2F !important; /* Forest Green */
+  border: 2px solid #1F3B2F !important;
+  color: #F5F5F2 !important; /* Soft White */
+}
+
+.pra button:hover {
+  background-color: #7A8B6F !important; /* Olive Accent background */
+  border-color: #7A8B6F !important;
+  color: #1F3B2F !important; /* High contrast dark green text on hover */
+}
+
+.back-top-wrap {
+  background-color: #7A8B6F !important; /* Olive Accent back to top */
+  box-shadow: 0 4px 12px rgba(122, 139, 111, 0.4) !important;
+}
+
+.back-top-wrap .fas.fa-arrow-up {
+  color: #F5F5F2 !important; /* Soft White arrow */
+}
+
+.back-top-wrap:hover {
+  background-color: #1F3B2F !important; /* Forest Green hover */
+  box-shadow: 0 10px 20px rgba(31, 59, 47, 0.4) !important;
+}
+
+.back-top-wrap:hover .fas.fa-arrow-up {
+  color: #F5F5F2 !important;
+}
+
+/* Rainbow Button CTA (overrides for silent luxury design) */
+.content .rainbow-button {
+  background-image: linear-gradient(90deg, #1F3B2F, #7A8B6F, #1F3B2F) !important;
+  box-shadow: 0 4px 15px rgba(31, 59, 47, 0.4) !important;
+}
+
+.content .rainbow-button:after {
+  background-color: #1F3B2F !important; /* Forest Green inner */
+  color: #F5F5F2 !important; /* Soft White text */
+}
+
+.content .rainbow-button:hover {
+  box-shadow: 0 10px 20px rgba(122, 139, 111, 0.5) !important;
+}
+
+/* Accordion FAQs Redesign */
+.accordion__heading h2 {
+  color: #1F3B2F !important;
+}
+
+.accordion__btn {
+  background: rgba(31, 59, 47, 0.05) !important; /* Subtle Forest Green tint */
+  color: #1F3B2F !important;
+  border-bottom: 1px solid rgba(183, 183, 176, 0.5) !important;
+}
+
+.accordion__btn:hover {
+  color: #1F3B2F !important; /* Keep text dark for contrast */
+  background: rgba(31, 59, 47, 0.1) !important;
+  box-shadow: inset 5px 0 0 #7A8B6F !important; /* Accent visual cue */
+}
+
+.accordion__item--active .accordion__btn {
+  color: #1F3B2F !important; /* Keep text dark for contrast */
+  border-bottom: 2px solid #7A8B6F !important;
+  background: rgba(31, 59, 47, 0.08) !important;
+}
+
+.accordion__content {
+  background-color: #F5F5F2 !important;
+  color: #1F3B2F !important;
+}
+
+.accordion__content p {
+  color: rgba(31, 59, 47, 0.9) !important;
+}
+
+/* Footer Section Redesign */
+footer {
+  background-color: #1F3B2F !important; /* Deep Forest Green background */
+  color: #F5F5F2 !important; /* Soft White text */
+}
+
+footer h3 {
+  color: #F5F5F2 !important;
+}
+
+footer h3 .underline {
+  background: #B7B7B0 !important; /* Stone Gray line */
+}
+
+footer h3 .underline span {
+  background: #7A8B6F !important; /* Olive Accent slider */
+}
+
+footer .col ul li a {
+  color: rgba(245, 245, 242, 0.8) !important;
+}
+
+footer .col ul li a:hover {
+  color: #b0cbb4 !important; /* Lighter olive highlight for high contrast on dark green background */
+}
+
+footer .col .social-menu ul a li {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #F5F5F2 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+footer .col .social-menu ul a li:hover {
+  background: #7A8B6F !important;
+  border-color: #7A8B6F !important;
+}
+
+footer .col .social-menu ul a #social-twitter:hover i {
+  color: #1da1f2 !important;
+}
+
+footer .col .social-menu ul a #social-github:hover i {
+  color: #ffffff !important;
+}
+
+footer .col .social-menu ul a #social-linkedin:hover i {
+  color: #0077b5 !important;
+}
+
+footer .col .social-menu ul a #social-instagram:hover i {
+  color: #e1306c !important;
+}
+
+/* Hamburger menu items styling */
+.menu {
+  background-color: #1F3B2F !important; /* Forest Green menu */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.menu-link li a {
+  color: #F5F5F2 !important; /* Soft White text */
+}
+
+.menu-link li a:hover {
+  color: #b0cbb4 !important; /* Lighter olive highlight for high contrast on dark green background */
+}
+
+/* ADAPTIVE TEXT CONTRAST SYSTEM FOR STYLE.CSS */
+header h1, header h2, header h3, header h4, header h5, header p, header span {
+  color: #F5F5F2 !important;
+}
+
+header .heading-span, header span.heading-span {
+  color: #b0cbb4 !important; /* High contrast light green for dark header overlay */
+}
+
+.footer-container p, .footer-container .footerpara, .footer-container .footerheading, .footer-container .email-id a {
+  color: #F5F5F2 !important;
+}
+
+.footer-container .email-id a:hover {
+  color: #b0cbb4 !important;
+}
+
+
+
