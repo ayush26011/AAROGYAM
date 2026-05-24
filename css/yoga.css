@@ -677,3 +677,86 @@ footer a:focus {
   display: flex;
   flex-direction: column;
 }
+
+/* ==========================================
+   PREMIUM CUSTOM ANIMATIONS & UI ENHANCEMENTS
+   ========================================== */
+
+/* Preloader Smooth Fade */
+#load {
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out !important;
+}
+
+/* Nav Link Underline Easing */
+.nav-links ul li::after {
+  height: 2px !important;
+  background: linear-gradient(90deg, #5b8696, #0da1dc) !important;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Smooth Navigation Scroll Highlight */
+nav {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease !important;
+}
+
+/* Button Upgrades */
+.aasan1 button, .more {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.aasan1 button:hover, .more:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.15) !important;
+}
+
+.aasan1 button:active, .more:active {
+  transform: translateY(1px) scale(0.97) !important;
+}
+
+/* Footer Link Highlights */
+.footer-container .col ul li a::after {
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.footer-container .col .social-menu ul a li {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.footer-container .col .social-menu ul a li:hover {
+  transform: translateY(-4px) scale(1.1) !important;
+}
+
+.footer-container .col .social-menu ul a #social-github:hover i {
+  color: #ffffff !important;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8)) !important;
+}
+
+.footer-container .col .social-menu ul a #social-linkedin:hover i {
+  color: #0077b5 !important;
+  filter: drop-shadow(0 0 6px rgba(0, 119, 181, 0.8)) !important;
+}
+
+.footer-container .col .social-menu ul a #social-twitter:hover i {
+  color: #1da1f2 !important;
+  filter: drop-shadow(0 0 6px rgba(29, 161, 242, 0.8)) !important;
+}
+
+.footer-container .col .social-menu ul a #social-instagram:hover i {
+  color: #e1306c !important;
+  filter: drop-shadow(0 0 6px rgba(225, 48, 108, 0.8)) !important;
+}
+
+/* Back to top button microinteraction */
+.back-top-wrap {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.back-top-wrap:hover {
+  transform: translateY(-5px) scale(1.1) !important;
+  box-shadow: 0 10px 20px rgba(0, 162, 255, 0.3) !important;
+}
+
+.back-top-wrap:active {
+  transform: translateY(-1px) scale(0.95) !important;
+}
+

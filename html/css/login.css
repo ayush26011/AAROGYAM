@@ -291,3 +291,53 @@ img {
     margin-right: 15%;
   }
 }
+
+/* ==========================================
+   PREMIUM CUSTOM ANIMATIONS & UI ENHANCEMENTS
+   ========================================== */
+
+/* Preloader Smooth Fade */
+#load {
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out !important;
+}
+
+/* Inputs Focus Glow */
+.inputbox {
+  transition: all 0.3s ease !important;
+}
+
+.inputbox:focus {
+  border-color: var(--main-icon-color) !important;
+  box-shadow: 0 0 12px rgba(83, 40, 175, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Button Upgrades */
+.signin {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.signin:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 10px 20px rgba(83, 40, 175, 0.3) !important;
+}
+
+.signin:active {
+  transform: translateY(1px) scale(0.97) !important;
+}
+
+/* Link transitions and microinteractions */
+.signupbutton, .signinbutton, .forgotpass span, .tag, .tag1 {
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.signupbutton:hover, .signinbutton:hover, .forgotpass span:hover {
+  transform: scale(1.05) !important;
+  text-shadow: 0 0 6px rgba(83, 40, 175, 0.3) !important;
+}
+
+.tag:hover, .tag1:hover {
+  transform: translateX(-4px) !important;
+  color: var(--main-icon-color) !important;
+}

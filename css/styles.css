@@ -127,3 +127,21 @@ h1:hover {
     animation: typing 1s steps(12);
   }
 }
+
+/* ==========================================
+   PREMIUM CUSTOM ANIMATIONS & UI ENHANCEMENTS
+   ========================================== */
+
+h1, h3 a {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+h3 a:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  text-shadow: 0 0 15px rgba(138, 43, 226, 0.8), 0 0 30px rgba(138, 43, 226, 0.4) !important;
+}
+
+h3 a:active {
+  transform: translateY(0px) scale(0.98) !important;
+}
+

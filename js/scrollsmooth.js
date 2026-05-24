@@ -1,10 +1,17 @@
-const scroll_button = document.querySelector(".smooth-scroll");
-for(let i of scroll_button)
-{
-    i.addEventListener('click',function(e){
+const scroll_buttons = document.querySelectorAll(".smooth-scroll");
+scroll_buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = this.getAttribute('href');
-        const target_position = document.querySelector(target);
-        target_position.scrollIntoView({scrollTop:target.scrollTop,behavior:'smooth'}); 
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
     });
-} 
+});
+

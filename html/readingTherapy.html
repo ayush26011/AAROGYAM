@@ -43,10 +43,10 @@
 
         <ul>
           <li><a href="/index.html">HOME</a></li>
-          <li><a href="#articles" class=".smooth-scroll">ARTICLES</a></li>
-          <li><a href="#quotes" class=".smooth-scroll">QUOTES </a></li>
-          <li><a href="#summary" class=".smooth-scroll">SUMMARIES</a></li>
-          <li><a href="#reading" class=".smooth-scroll">BOOKS </a></li>
+          <li><a href="#articles" class="smooth-scroll">ARTICLES</a></li>
+          <li><a href="#quotes" class="smooth-scroll">QUOTES </a></li>
+          <li><a href="#summary" class="smooth-scroll">SUMMARIES</a></li>
+          <li><a href="#reading" class="smooth-scroll">BOOKS </a></li>
 
         </ul>
       </div>
@@ -549,7 +549,12 @@
       var preloader = document.getElementById('load');
       var scroll = document.getElementById('main');
       function myfunction(){
-          preloader.style.display='none';
+          preloader.style.transition = 'opacity 0.6s ease-out, visibility 0.6s ease-out';
+          preloader.style.opacity = '0';
+          preloader.style.visibility = 'hidden';
+          setTimeout(() => {
+              preloader.style.display='none';
+          }, 600);
           scroll.style.overflow='scroll';
       }
       const backTopElement = document.getElementById("back-top-div");

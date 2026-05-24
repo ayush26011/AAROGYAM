@@ -666,7 +666,12 @@
 
     let preloader = document.querySelector(".loading-wrapper");
     function myFunction() {
-      preloader.style.display = 'none';
+      preloader.style.transition = 'opacity 0.6s ease-out, visibility 0.6s ease-out';
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 600);
       document.body.style.overflow = 'auto';
     }
     let navbar = document.querySelector("#nav");
@@ -703,7 +708,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
 </body>
 

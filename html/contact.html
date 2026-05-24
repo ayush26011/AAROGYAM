@@ -53,7 +53,12 @@
     <script>
         var preloader = document.getElementById('load');
         function myfunction(){
-            preloader.style.display='none';
+            preloader.style.transition = 'opacity 0.6s ease-out, visibility 0.6s ease-out';
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            setTimeout(() => {
+                preloader.style.display='none';
+            }, 600);
         }
     </script>
 </body>

@@ -48,9 +48,9 @@
     <div class="nav-links" id="navLinks">
       <ul>
         <li><a href="../index.html">HOME</a></li>
-        <li><a href="#music" class=".smooth-scroll">MUSIC</a></li>
-        <li><a href="#podcasts" class=".smooth-scroll">PODCASTS </a></li>
-        <li><a href="#audiobooks" class=".smooth-scroll">AUDIOBOOKS </a></li>
+        <li><a href="#music" class="smooth-scroll">MUSIC</a></li>
+        <li><a href="#podcasts" class="smooth-scroll">PODCASTS </a></li>
+        <li><a href="#audiobooks" class="smooth-scroll">AUDIOBOOKS </a></li>
       </ul>
     </div>
     <div class="hamburger" id="ham">
@@ -662,7 +662,12 @@
     var preloader = document.getElementById('load');
     var scroll = document.getElementById('main');
     function myfunction() {
-      preloader.style.display = 'none';
+      preloader.style.transition = 'opacity 0.6s ease-out, visibility 0.6s ease-out';
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 600);
       scroll.style.overflow = 'scroll';
 
       const backTopElement = document.getElementById("back-top-div");
